@@ -69,7 +69,7 @@ level=1 # the level refers to the level of the localizing matrix constructed to 
 HAE_fast1(Ms, av_eq, level, m; op_eq=op_eq)
 ```
 
-Furthermore, we can use another speed-up. As pointed out at point 1 of Remark 2.6, the operator equalities $Z_{a,i}^* Z_{a,i}\leq\alpha_i$ and $Z_{a,i} Z_{a,i}^*\leq\alpha_i$ do not always improve the results. With the following function, we will not construct them and we will impose only that $\langle Z_{a,i}^* Z_{a,i}\rangle \leq\alpha_i$ and $\langle Z_{a,i} Z_{a,i}^*\rangle \leq\alpha_i$.
+Furthermore, we can use another speed-up. As pointed out at point 1 of Remark 2.6, the operator equalities $Z_{a,i}^* Z_{a,i}\leq\alpha_i$ and $Z_{a,i} Z_{a,i}^* \leq\alpha_i$ do not always improve the results. With the following function, we will not construct them and we will impose only that $\langle Z_{a,i}^* Z_{a,i}\rangle \leq\alpha_i$ and $\langle Z_{a,i} Z_{a,i}^* \rangle \leq\alpha_i$.
 
 ```julia
 m=8

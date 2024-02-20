@@ -1,5 +1,5 @@
 include("qnpa.jl")
-using LinearAlgebra, Optim, Plots
+using LinearAlgebra, Optim
 
 function xlog2x(x)
     if x<0 || x>1

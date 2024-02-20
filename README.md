@@ -20,7 +20,12 @@ x0=[pi/4,0,pi/2,pi/4,-pi/4,0]
 best_qstrat(x0,0.97;level="2+ A B E",m=16) # level refers to the level of the NPA hierarchy
 ```
 
-Let us now introduce a problem from scratch. We can define Alice and Bob's measurement operators as projectors with two inputs and two outputs with:
+Let us now introduce a problem from scratch. We start including all the functions with
+```julia
+include("qnpa.jl")
+```
+
+We can define Alice and Bob's measurement operators as projectors with two inputs and two outputs with:
 ```julia
 PA = projector(1,1:2,1:2,full=true)
 PB = projector(2,1:2,1:2,full=true)

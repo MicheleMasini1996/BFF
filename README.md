@@ -14,10 +14,13 @@ One can obtain the results for DIQKD studied in https://arxiv.org/abs/2106.13692
 ```julia
 include("repr-brown.jl")
 # we can compute the keyrate at η=1 with a standard quantum strategy
-keyrate(pi/4,1; m=16) # m is the number of gauss-radau coefficients
+η=1
+θ=pi/4
+keyrate(θ,η; m=16) # m is the number of gauss-radau coefficients
 # we can also find heuristically an optimal quantum strategy (here we choose η=0.97)
 x0=[pi/4,0,pi/2,pi/4,-pi/4,0]
-best_qstrat(x0,0.97;level="2+ A B E",m=16) # level refers to the level of the NPA hierarchy
+η=0.97
+best_qstrat(x0,η;level="2+ A B E",m=16) # level refers to the level of the NPA hierarchy
 ```
 
 Let us now introduce a problem from scratch. We start including all the functions with

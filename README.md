@@ -15,7 +15,7 @@ One can obtain the results for DIQKD studied in https://arxiv.org/abs/2106.13692
 include("repr-brown.jl")
 # we can compute the keyrate at η=1 with a predefined quantum strategy
 η=1
-θ=pi/4
+θ=pi/4 # we use a maximally entangled state to compute the reference statistics
 keyrate(θ,η; m=16) # m is the number of gauss-radau coefficients
 # we can also find heuristically an optimal quantum strategy (here we choose η=0.97)
 x0=[pi/4,0,pi/2,pi/4,-pi/4,0]

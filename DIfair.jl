@@ -22,6 +22,22 @@ function hcond(pab,pb)
     hshannon(pab)-hshannon(pb)
 end
 
+"""
+In the following, we will use
+    ηA = detection efficiency of Alice
+    ηB = detection efficiency of Bob
+    p = probability of a dark count per round
+    q = probability of Alice of flipping her outcome (noisy preprocessing)
+    v = visibility of the state prepared
+
+The initial noiseless state prepared is
+    |φ(θ)> = cos(θ)|00> + sin(θ)|11>
+and the measurements of Alice and Bob are 
+    Ai=cos(αi)σz+sin(αi)σx
+    Βi=cos(βi)σz+sin(βi)σx
+Bob keeps his 3 outcomes separate, while Alice discards her non-detection outcomes
+"""
+
 # Observable in ZX
 O(α) = cos(α).* [1 0; 0 -1]+sin(α).* [0 1; 1 0]
 # Projector for outcome a
@@ -80,9 +96,9 @@ function hae_2323(θ,ηA,ηB,p,v; level="1+A E+A B", m=8, α1=0, α2=pi/2, β1=p
 
     Ms = [(1-q)*PA[1,1]+q*PA[2,1] q*PA[1,1]+(1-q)*PA[2,1]]
     if localizing==true
-        return HAE_fast(Ms, av_eq, level, m)
+        return HAE_fast1(Ms, av_eq, level, m)
     else
-        return HAE_fast3(Ms, av_eq, level, m)
+        return HAE_fast2(Ms, av_eq, level, m)
     end
 end
 

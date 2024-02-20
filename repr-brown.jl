@@ -1,5 +1,5 @@
 include("qnpa.jl")  
-using LinearAlgebra, Optim, Plots
+using LinearAlgebra, Optim
 using Mosek, MosekTools
 
 function xlog2x(x)

@@ -25,16 +25,17 @@ end
 
 """
 In the following, we will use
-ηA = detection efficiency of Alice
-ηB = detection efficiency of Bob
-p = probability of a dark count per round
-q = probability of Alice of flipping her outcome (noisy preprocessing)
-v = visibility of the state prepared
-The initial state prepared is
-|φ(θ)> = cos(θ)|00> + sin(θ)|11>
+    ηA = detection efficiency of Alice
+    ηB = detection efficiency of Bob
+    p = probability of a dark count per round
+    q = probability of Alice of flipping her outcome (noisy preprocessing)
+    v = visibility of the state prepared
+
+The initial noiseless state prepared is
+    |φ(θ)> = cos(θ)|00> + sin(θ)|11>
 and the measurements of Alice and Bob are 
-A1=B1=σz
-Α2=Β2=σx
+    A1=B1=σz
+    Α2=Β2=σx
 Bob keeps his 3 outcomes separate, while Alice discards her non-detection outcomes
 """
 

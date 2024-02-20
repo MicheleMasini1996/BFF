@@ -23,6 +23,22 @@ function hcond(pab,pb)
     hshannon(pab)-hshannon(pb)
 end
 
+"""
+In the following, we will use
+    η = detection efficiency of Alice and Bob
+    q = probability of Alice flipping her outcome (noisy preprocessing)
+    v = visibility of the state prepared
+
+The initial noiseless state prepared is
+    |φ(θ)> = cos(θ)|00> + sin(θ)|11>
+and the measurements of Alice and Bob are 
+    Ai=cos(αi)σz+sin(αi)σx
+    Βi=cos(βi)σz+sin(βi)σx
+Alice and Bob map their non-detection outcome to one of the other outcomes
+except during key generation rounds, where Bob keeps his 3 outcomes separate
+"""
+
+
 function A(a,x,η; α1=0, α2=pi/2)
     # Alice's POVMs
     A(α) = cos(α).* [1 0; 0 -1]+sin(α).* [0 1; 1 0]

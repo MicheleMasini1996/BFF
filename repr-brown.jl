@@ -1,6 +1,5 @@
 include("qnpa.jl")  
 using LinearAlgebra, Optim
-using Mosek, MosekTools
 
 function xlog2x(x)
     if x<0 || x>1

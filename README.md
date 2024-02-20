@@ -5,7 +5,7 @@ We used the code to do NPA from Erik Woodhead (https://github.com/ewoodhead/Quan
 
 Prerequisites:
 ```julia
-using Pkg; Pkg.add(["Combinatorics", "JuMP", "SCS", "BlockDiagonals", "Mosek", "MosekTools", "FastGaussQuadrature"])
+using Pkg; Pkg.add(["Combinatorics", "JuMP", "SCS", "BlockDiagonals", "Mosek", "MosekTools", "FastGaussQuadrature", "LinearAlgebra", "Optim"])
 ```
 
 Moreover, a Mosek license is necessary to use the code.

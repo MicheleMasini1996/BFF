@@ -13,7 +13,7 @@ Moreover, a Mosek license is necessary to use the code.
 One can obtain the results for DIQKD studied in https://arxiv.org/abs/2106.13692 using the file "repr-brown.jl" in this way:
 ```julia
 include("repr-brown.jl")
-# we can compute the keyrate at η=1 with a standard quantum strategy
+# we can compute the keyrate at η=1 with a predefined quantum strategy
 η=1
 θ=pi/4
 keyrate(θ,η; m=16) # m is the number of gauss-radau coefficients

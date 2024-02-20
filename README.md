@@ -79,3 +79,16 @@ m=8
 level="1+A E+A B" 
 HAE_fast2(Ms, av_eq, level, m; op_eq=op_eq)
 ```
+
+We can compute the keyrate in a 1SDI scenario imposing full statistics using
+```julia
+include("1SDI.jl")
+```
+To verify the positivity of the keyrate at η=0.501, we can use
+```julia
+θ=pi/4
+η=0.501
+keyrate(θ,η)
+```
+
+Similarly, one can use the file fairDI.jl to compute keyrates in a DI scenario with a fair sampling assumption on Alice's side.

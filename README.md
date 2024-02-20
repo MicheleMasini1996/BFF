@@ -37,5 +37,37 @@ B2 = PB[1,2]-PB[2,2]
 
 And we define the constraints of our problem. In particular, we force $\langle A_2\otimes B_2\rangle=1$.
 ```julia
-av_eq = [[A2*B2,1]]
+av_eq = [ [A2*B2, 1] ]
+```
+
+Now, let us define an operator constraint on Alice's observables. In particular, we will force anti-commutativity.
+```julia
+op_eq = [ A1*A2 + A2*A1 ]
+```
+
+Finally, we define the operators used to construct the secret key. In this case we extract the key from the first measurement of Alice.
+```julia
+Ms = [ PA[1,1] PA[2,1] ]
+```
+
+We can now compute the conditional entropy $H(A_1|E)$ in three different ways. The slowest method is the general method introduced in the article of Brown Fawzi Fawzi which can be used in this way:
+```julia
+m=2
+level=1 # the level refers to the level of the localizing matrix constructed to implement the operator constraint, the principal moment matrix will be slightly bigger
+HAE_simple(Ms, av_eq, level, m; op_eq=op_eq)
+```
+
+Second, we can use speed-up number 3 from Remark 2.6 in this way
+```julia
+m=8
+level=1 # the level refers to the level of the localizing matrix constructed to implement the operator constraint, the principal moment matrix will be slightly bigger
+HAE_fast1(Ms, av_eq, level, m; op_eq=op_eq)
+```
+
+Furthermore, we can use another speed-up. As pointed out at point 1 of Remark 2.6, the operator equalities $Z_{a,i}^* Z_{a,i}\leq\alpha_i$ and $Z_{a,i} Z_{a,i}^*\leq\alpha_i$ do not always improve the results. With the following function, we will not construct them and we will impose only that $\langle Z_{a,i}^* Z_{a,i}\rangle \leq\alpha_i$ and $\langle Z_{a,i} Z_{a,i}^*\rangle \leq\alpha_i$.
+
+```julia
+m=8
+level="1+A E+A B" 
+HAE_fast2(Ms, av_eq, level, m; op_eq=op_eq)
 ```

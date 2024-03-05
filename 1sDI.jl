@@ -100,7 +100,7 @@ function keyrate(θ,η; v=1, m=15, q=0)
     if q<0 || q>0.5
         return 0
     else
-        res=hae_faster(θ,1,η,0,v; m=m, q=q)-hab(θ,1,η,0,v; q=q)
+        res=hae(θ,1,η,0,v; m=m, q=q)-hab(θ,1,η,0,v; q=q)
         return res
     end
 end

@@ -50,7 +50,7 @@ And we define the constraints of our problem. In particular, we force $\langle A
 av_eq = [ [A2*B2, 1] ]
 ```
 
-Now, let us define an operator constraint on Alice's observables. In particular, we will force anti-commutativity.
+Now, let us define an operator constraint on Alice's observables. In particular, we will force anti-commutativity, i.e., $A_1A_2+A_2A_1=0$.
 ```julia
 op_eq = [ A1*A2 + A2*A1 ]
 ```

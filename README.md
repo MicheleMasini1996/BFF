@@ -94,4 +94,4 @@ To verify the positivity of the keyrate at η=0.501, we can use
 keyrate(θ,η)
 ```
 
-Similarly, one can use the file fairDI.jl to compute keyrates in a DI scenario with a fair sampling assumption on Alice's side.
+Similarly, one can use the file fairDI.jl to compute keyrates in a scenario with a fair sampling assumption on Alice's side and no assumptions on anti-commutativity.

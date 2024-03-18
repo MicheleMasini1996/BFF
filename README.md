@@ -10,6 +10,8 @@ using Pkg; Pkg.add(["Combinatorics", "JuMP", "SCS", "BlockDiagonals", "Mosek", "
 
 Moreover, a Mosek license is necessary to use the code.
 
+Now, download and extract the folder with the code. Launch Julia inside the folder BFF-main to be able to run the following commands.
+
 # Reproducing a point from https://arxiv.org/abs/2106.13692
 One can obtain the results for DIQKD studied in https://arxiv.org/abs/2106.13692 (Figue 4, violet line) using the file "repr-brown.jl" in this way:
 ```julia

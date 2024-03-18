@@ -87,7 +87,7 @@ HAE_fast2(Ms, av_eq, level, m; op_eq=op_eq)
 # Code to reproduce the results of "One-sided DI-QKD secure against coherent attacks over long distances"
 We can compute the keyrate in a 1SDI scenario imposing full statistics using
 ```julia
-include("1SDI.jl")
+include("1sDI.jl")
 ```
 To verify the positivity of the keyrate at η=0.501, we can use
 ```julia
